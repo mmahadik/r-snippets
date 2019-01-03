@@ -3,25 +3,15 @@
 # Numeric Values, Character Strings, Logical, Complex Numbers
 
 # How to get mode of a value in variable
-variable1 <- "Hello World!"
-print(variable1)
-mode(variable1)
+get_mode <- function(values) {
+    for (value in values) {
+        cat("Value: ", value, "\n")
+        cat("Mode: ", mode(value), "\n")
+        cat(rep("_", 10), "\n")
+    }
+}
 
-variable1 <- 10.1 
-print(variable1)
-mode(variable1)
-
-variable1 <- 10 
-print(variable1)
-mode(variable1)
-
-variable1 <- 3 == 4 
-print(variable1)
-mode(variable1)
-
-variable1 <- 3i + 3
-print(variable1)
-mode(variable1)
-
-
+values <- list("Hello World!", 3 == 4,
+               10.1, 10, 3i + 5)
+get_mode(values)
 
