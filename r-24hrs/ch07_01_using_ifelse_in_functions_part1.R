@@ -50,3 +50,20 @@ names <- c("Milind", "Milind")
 if (all(names == "Milind")) {
     cat("Hi all Milinds", "\n")
 }
+
+
+# Returning early
+early_return_func <- function(x, y) {
+    # only proceed if length of x and y is at least 10
+    if (length(x) < 10 | length(y) < 10) {
+        cat("Incomplete input. Returning.\n")
+        return(NA)
+    }
+    x + y
+}
+result <- early_return_func(1:5, 4:9)
+print(result)
+
+result <- early_return_func(1:20, 2:21)
+print(result)
+
