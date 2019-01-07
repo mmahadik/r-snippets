@@ -1,20 +1,26 @@
 # Code for demonstrating usage of for loop.
 
 
+# a very simple for loop
 demo_for_loop <- function() {
     fruits <- c("apple", "orange", "guava", "banana")
     for (fruit in fruits) {
         cat(fruit, ":", nchar(fruit), "\n")
     }
 }
-# demo_for_loop()
+demo_for_loop()
 
+
+# for loop iterating over a df
+# iterates over the variables not
+# cases
 demo_iterating_over_df <- function() {
     for (rec in iris[1:5,]) {
         print(rec)
     }
 }
-# demo_iterating_over_df()
+demo_iterating_over_df()
+
 
 
 # demo of how to effect group by and compute using for loop
