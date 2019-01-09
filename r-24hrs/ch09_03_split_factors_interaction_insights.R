@@ -23,6 +23,3 @@ batch_year_domain <- levels(batch_year_interaction)
 # use batch_year_domain in split
 df <- data.frame(batch=batch, year=year, size=rpois(n=10, lambda=20))
 split(df, batch_year_interaction)
-
-
-
